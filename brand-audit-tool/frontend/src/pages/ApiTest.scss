@@ -1,0 +1,161 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.api-test-page {
+  padding: $spacing-05;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-07;
+
+    h1 {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-03;
+    }
+
+    .page-description {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+
+  .summary-tile {
+    padding: $spacing-06;
+    margin-bottom: $spacing-06;
+
+    h3 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    .summary-stats {
+      display: flex;
+      gap: $spacing-06;
+      margin-bottom: $spacing-05;
+
+      .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $spacing-05;
+        background-color: $layer-01;
+        border-radius: 4px;
+        min-width: 100px;
+
+        .stat-value {
+          @include type-style('heading-05');
+          margin-bottom: $spacing-02;
+        }
+
+        .stat-label {
+          @include type-style('label-01');
+          color: $text-secondary;
+          text-transform: uppercase;
+        }
+
+        &.success .stat-value {
+          color: $support-success;
+        }
+
+        &.error .stat-value {
+          color: $support-error;
+        }
+
+        &.total .stat-value {
+          color: $text-primary;
+        }
+      }
+    }
+
+    .summary-message {
+      margin-top: $spacing-05;
+    }
+  }
+
+  .results-tile {
+    padding: $spacing-06;
+
+    h3 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    .test-title {
+      display: flex;
+      align-items: center;
+      gap: $spacing-03;
+      width: 100%;
+
+      .status-icon {
+        flex-shrink: 0;
+
+        &.success {
+          color: $support-success;
+        }
+
+        &.error {
+          color: $support-error;
+        }
+      }
+
+      .test-name {
+        flex: 1;
+        @include type-style('body-01');
+        font-weight: 600;
+      }
+
+      .test-duration {
+        @include type-style('label-01');
+        color: $text-secondary;
+      }
+    }
+
+    .test-details {
+      padding: $spacing-05 0;
+
+      h4 {
+        @include type-style('heading-01');
+        margin-bottom: $spacing-03;
+      }
+    }
+  }
+
+  .instructions-tile {
+    padding: $spacing-06;
+
+    h3 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    h4 {
+      @include type-style('heading-02');
+      margin-top: $spacing-06;
+      margin-bottom: $spacing-03;
+    }
+
+    ol, ul {
+      @include type-style('body-01');
+      color: $text-secondary;
+      margin-bottom: $spacing-05;
+
+      li {
+        margin-bottom: $spacing-03;
+
+        strong {
+          color: $text-primary;
+        }
+
+        ul {
+          margin-top: $spacing-02;
+          margin-left: $spacing-05;
+        }
+      }
+    }
+  }
+}
+
+// Made with Bob

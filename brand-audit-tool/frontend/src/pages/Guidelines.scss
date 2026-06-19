@@ -1,0 +1,109 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.guidelines-page {
+  padding: $spacing-05;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-07;
+
+    h1 {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-03;
+    }
+
+    .page-description {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+
+  .guideline-name {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-03;
+
+    svg {
+      flex-shrink: 0;
+      margin-top: $spacing-02;
+      color: $icon-secondary;
+    }
+
+    .name {
+      @include type-style('body-01');
+      font-weight: 600;
+      margin-bottom: $spacing-02;
+    }
+
+    .description {
+      @include type-style('label-01');
+      color: $text-secondary;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: $spacing-02;
+  }
+
+  .rules-section {
+    margin-top: $spacing-07;
+
+    h2 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    .rules-content {
+      padding: $spacing-05 0;
+
+      .rule-group {
+        margin-bottom: $spacing-06;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h4 {
+          @include type-style('heading-01');
+          margin-bottom: $spacing-03;
+          color: $text-primary;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            @include type-style('body-01');
+            padding: $spacing-03 0;
+            padding-left: $spacing-05;
+            position: relative;
+            color: $text-secondary;
+
+            &::before {
+              content: '•';
+              position: absolute;
+              left: 0;
+              color: $icon-primary;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-05;
+  }
+}
+
+// Made with Bob

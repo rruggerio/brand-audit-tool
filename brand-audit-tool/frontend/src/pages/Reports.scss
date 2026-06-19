@@ -1,0 +1,97 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.reports-page {
+  padding: $spacing-05;
+
+  .page-header {
+    margin-bottom: $spacing-07;
+
+    h1 {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-03;
+    }
+
+    .page-description {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+
+  .filters-section {
+    display: flex;
+    gap: $spacing-05;
+    margin-bottom: $spacing-06;
+    align-items: flex-end;
+
+    > * {
+      flex: 1;
+      max-width: 300px;
+    }
+  }
+
+  .report-name {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-03;
+
+    svg {
+      flex-shrink: 0;
+      margin-top: $spacing-02;
+      color: $icon-secondary;
+    }
+
+    .name {
+      @include type-style('body-01');
+      font-weight: 600;
+      margin-bottom: $spacing-02;
+    }
+
+    .url {
+      @include type-style('label-01');
+      color: $text-secondary;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: $spacing-02;
+  }
+
+  .stats-section {
+    margin-top: $spacing-07;
+
+    h2 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $spacing-05;
+
+      .stat-card {
+        padding: $spacing-05;
+        background-color: $layer-01;
+        border-radius: 4px;
+        text-align: center;
+
+        .stat-value {
+          @include type-style('heading-05');
+          color: $text-primary;
+          margin-bottom: $spacing-03;
+        }
+
+        .stat-label {
+          @include type-style('label-01');
+          color: $text-secondary;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+// Made with Bob

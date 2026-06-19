@@ -1,0 +1,104 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.new-audit-page {
+  padding: $spacing-05;
+
+  .page-header {
+    margin-bottom: $spacing-07;
+
+    h1 {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-03;
+    }
+
+    .page-description {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+
+  .progress-sidebar {
+    position: sticky;
+    top: $spacing-05;
+  }
+
+  .form-container {
+    padding: $spacing-06;
+    min-height: 500px;
+
+    .form-step {
+      h2 {
+        @include type-style('heading-03');
+        margin-bottom: $spacing-03;
+      }
+
+      .step-description {
+        @include type-style('body-01');
+        color: $text-secondary;
+        margin-bottom: $spacing-06;
+      }
+
+      .advanced-options {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-05;
+      }
+
+      .review-section {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-05;
+
+        .review-item {
+          padding: $spacing-05;
+          background-color: $layer-01;
+          border-radius: 4px;
+
+          h4 {
+            @include type-style('heading-01');
+            margin-bottom: $spacing-03;
+            color: $text-primary;
+          }
+
+          p {
+            @include type-style('body-01');
+            color: $text-secondary;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              @include type-style('body-01');
+              padding: $spacing-02 0;
+              color: $text-secondary;
+              position: relative;
+              padding-left: $spacing-05;
+
+              &::before {
+                content: '✓';
+                position: absolute;
+                left: 0;
+                color: $support-success;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-05;
+    margin-top: $spacing-06;
+  }
+}
+
+// Made with Bob

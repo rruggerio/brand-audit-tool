@@ -1,0 +1,115 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/type' as *;
+
+.dashboard-page {
+  padding: $spacing-05;
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-07;
+
+    h1 {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-03;
+    }
+
+    .page-description {
+      @include type-style('body-01');
+      color: $text-secondary;
+    }
+  }
+
+  .stat-tile {
+    padding: $spacing-05;
+    height: 100%;
+    position: relative;
+
+    .stat-value {
+      @include type-style('heading-05');
+      margin-bottom: $spacing-02;
+      color: $text-primary;
+
+      &.stat-success {
+        color: $support-success;
+      }
+
+      &.stat-warning {
+        color: $support-warning;
+      }
+
+      &.stat-error {
+        color: $support-error;
+      }
+
+      &.stat-small {
+        @include type-style('heading-03');
+      }
+    }
+
+    .stat-label {
+      @include type-style('label-01');
+      color: $text-secondary;
+      text-transform: uppercase;
+    }
+
+    .stat-icon {
+      position: absolute;
+      top: $spacing-05;
+      right: $spacing-05;
+      color: $icon-secondary;
+    }
+  }
+
+  .recent-audits-section {
+    margin-top: $spacing-07;
+
+    h2 {
+      @include type-style('heading-03');
+      margin-bottom: $spacing-05;
+    }
+
+    .score-badge {
+      display: inline-block;
+      padding: $spacing-02 $spacing-03;
+      border-radius: 4px;
+      font-weight: 600;
+      @include type-style('label-01');
+
+      &.score-success {
+        background-color: $support-success;
+        color: $text-on-color;
+      }
+
+      &.score-warning {
+        background-color: $support-warning;
+        color: $text-primary;
+      }
+
+      &.score-error {
+        background-color: $support-error;
+        color: $text-on-color;
+      }
+    }
+  }
+
+  .quick-actions-tile {
+    margin-top: $spacing-07;
+    padding: $spacing-05;
+
+    h3 {
+      @include type-style('heading-02');
+      margin-bottom: $spacing-05;
+    }
+
+    .quick-actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $spacing-05;
+    }
+  }
+}
+
+// Made with Bob
